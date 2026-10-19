@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hello, Cloud</title>
+<style>
+  :root {
+    --bg: #f4f1ea;
+    --ink: #1f1d1a;
+    --muted: #8a857c;
+    --line: #dcd6cb;
+    --accent: #c96442;
+    --card: #fbfaf6;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); }
+  body {
+    width: 1600px; height: 900px;
+    color: var(--ink);
+    font-family: "Helvetica Neue", Arial, "WenQuanYi Zen Hei", "PingFang SC", sans-serif;
+    position: relative; overflow: hidden;
+  }
+  .frame {
+    position: absolute; inset: 56px;
+    border: 1px solid var(--line);
+    display: grid; grid-template-columns: 1.15fr 1fr;
+  }
+  .left { padding: 96px 0 0 96px; display: flex; flex-direction: column; }
+  .tag {
+    font-size: 15px; letter-spacing: .32em; color: var(--muted);
+    display: flex; align-items: center; gap: 14px;
+  }
+  .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); }
+  h1 {
+    margin-top: 56px;
+    font-size: 116px; font-weight: 300; line-height: 1.02; letter-spacing: -.035em;
+  }
+  h1 em { font-style: normal; color: var(--accent); }
+  .sub { margin-top: 36px; font-size: 26px; color: #4a4640; letter-spacing: .12em; }
+  .foot {
+    margin-top: auto; margin-bottom: 72px;
+    display: flex; gap: 56px; font-size: 14px; color: var(--muted); letter-spacing: .14em;
+  }
+  .foot b { display: block; margin-top: 8px; font-size: 18px; font-weight: 500; color: var(--ink); letter-spacing: .04em; }
+  .right { display: flex; align-items: center; justify-content: center; padding-right: 56px; }
+  .term {
+    width: 540px; background: var(--card);
+    border: 1px solid var(--line); border-radius: 14px;
+    box-shadow: 0 30px 60px -30px rgba(60,40,20,.25);
+  }
+  .bar { display: flex; gap: 8px; padding: 16px 18px; border-bottom: 1px solid var(--line); }
+  .bar i { width: 11px; height: 11px; border-radius: 50%; background: var(--line); }
+  .body { padding: 26px 30px 30px; font: 16px/2.1 "DejaVu Sans Mono", Menlo, monospace; }
+  .p { color: var(--accent); }
+  .m { color: var(--muted); }
+  .ok { color: #5b8a5a; }
+  .cursor { display: inline-block; width: 9px; height: 18px; background: var(--ink); vertical-align: -3px; }
+  .corner {
+    position: absolute; right: 56px; bottom: 22px;
+    font-size: 12px; letter-spacing: .3em; color: var(--muted);
+  }
+</style>
+</head>
+<body>
+  <div class="frame">
+    <section class="left">
+      <div class="tag"><span class="dot"></span>FIRST RUN · CLOUD SESSION</div>
+      <h1>Hello,<br>Cloud<em>.</em></h1>
+      <p class="sub">第一次云端测试 · 一切就绪</p>
+      <div class="foot">
+        <div>DATE<b>2026.10.19</b></div>
+        <div>STATUS<b>Success</b></div>
+        <div>ENV<b>Remote Container</b></div>
+      </div>
+    </section>
+    <section class="right">
+      <div class="term">
+        <div class="bar"><i></i><i></i><i></i></div>
+        <div class="body">
+          <div><span class="p">❯</span> git clone first-repo</div>
+          <div class="m">&nbsp;&nbsp;cloned into container</div>
+          <div><span class="p">❯</span> render index.html</div>
+          <div class="m">&nbsp;&nbsp;1600 × 900 · png</div>
+          <div><span class="p">❯</span> git push</div>
+          <div class="ok">&nbsp;&nbsp;✓ done</div>
+          <div><span class="p">❯</span> <span class="cursor"></span></div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="corner">HELLO WORLD · 001</div>
+</body>
+</html>
